@@ -215,10 +215,12 @@ function* render(
       imageData.data[index + 2] = Math.max(0, Math.min(frame.z, 1)) * 255;
       imageData.data[index + 3] = 255;
     }
-    if(j & 63) yield imageData;
+    // if(!(j & 31)) yield;
+    // ctx.putImageData(imageData, 0, 0);
+    yield imageData;
   }
-  return null;
-  // ctx?.putImageData(imageData, 0, 0);
+  // yield 'done'
+  return null
 }
 
 export { render, width, height };

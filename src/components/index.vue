@@ -65,8 +65,10 @@ onMounted(() => {
       }else {
         ctx.putImageData(value, 0, 0)
       }
+      // if(pixelGenerator.next().value) {
+      //   clearInterval(renderTask);
+      // }
     }, 0);
-    // render(ctx, spheres, lights, envmap);
   };
 });
 </script>
